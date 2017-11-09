@@ -28,4 +28,4 @@ kc$cluster
 kc$centers
 plot(dataset$Sales~ dataset$Fcost, data = dataset)
 #colorful
-plot(dataset$Sales~ dataset$Fcost, data= dateset,col=kc$cluster)
+plot(dataset$Sales~ dataset$Fcost, data= dataset,col=kc$cluster)

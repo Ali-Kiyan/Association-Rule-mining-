@@ -15,3 +15,17 @@ distance
 print(distance,digits = 3)
 dataset.hclust = hclust(distance)
 plot(dataset.hclust,labels = dataset$Company,main='Default from hclust')
+#aliging from zero
+plot(dataset.hclust,hang = -1)
+dataset.avhclust<-hclust(distance,method = "average")
+plot(mydata.avhclust,hang= -1)
+member.c = cutree(dataset.hclust,3)
+member.c 
+member.a =cutree(dataset.avhclust,3)
+table(member.c,member.a)
+kc <- kmeans(normal,3)
+kc$cluster
+kc$centers
+plot(dataset$Sales~ dataset$Fcost, data = dataset)
+#colorful
+plot(dataset$Sales~ dataset$Fcost, data= dateset,col=kc$cluster)
